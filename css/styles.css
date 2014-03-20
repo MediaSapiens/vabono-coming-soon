@@ -1,0 +1,145 @@
+body{
+	background: #fff;
+  margin:0;
+	color:#333;
+	font:14px/20px Arial, Helvetica, sans-serif;
+	min-width: 960px;
+}
+img{border-style:none;}
+a{
+	color:#43bdea;
+	text-decoration:underline;
+	outline:none;
+}
+a:hover{text-decoration:none;}
+form,fieldset{
+	margin:0;
+	padding:0;
+	border-style:none;
+}
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figure,
+menu,
+dialog {
+	display: block;
+}
+
+.cup-wrapper {
+	width: 660px;
+	margin: 0 auto;
+}
+
+.cup-header {
+	padding: 30px 0;
+}
+
+.cup-page-logo {
+	display: block;
+	background: url('../images/cup-page-logo.png') no-repeat;
+	width: 122px;
+	height: 47px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+.cup-content {
+	padding: 30px 0;
+}
+
+.cup-content h1 {
+  font:18px/22px Arial, Helvetica, sans-serif;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
+
+.cup-content h2 {
+  font:14px/20px Arial, Helvetica, sans-serif;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.cup-content p {
+	margin: 0 0 20px;
+}
+
+.cup-back {
+	background: url('../images/bg-cup-back.png') no-repeat 0 8px;
+	color: #999;
+	text-decoration: none;
+	padding: 0 0 0 20px;
+	position: absolute;
+	left: 20px;
+	top: 100px;
+}
+
+.cup-back:hover {text-decoration: underline;}
+
+.page-img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.cup-holder {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0 0 0 -380px;
+	width: 760px;
+	height: 100%;
+}
+
+.cup-logo-block {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 20%;
+}
+
+.cup-logo-block .cup-logo {
+	display: block;
+	background: url('../images/cup-logo.png') no-repeat;
+	width: 141px;
+	height: 220px;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin: 0 auto 25px;
+}
+
+.cup-slogan {
+  color: #9859b6;
+  display: block;
+  text-transform: uppercase;
+}
+
+.cup-link {
+  position: absolute;
+  bottom: 10%;
+  left:0;
+  width: 100%;
+  text-align: center;
+}
+
+.cup-link a{
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+

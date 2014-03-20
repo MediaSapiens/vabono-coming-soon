@@ -1,0 +1,23 @@
+*.py[co]
+.DS_Store
+.project
+.pydevproject
+.settings/
+*.swp
+.idea
+env
+.envs
+.directory
+_dumps
+## for brunch
+# NPM packages folder.
+client/node_modules/
+static
+# Brunch folder for temporary files.
+client/tmp/
+local_settings.py
+test_local_settings.py
+celerybeat-schedule
+fab_settings.py
+.komodotools
+*.komodoproject
