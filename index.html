@@ -47,12 +47,11 @@ function register($form) {
     error       : function(err) { $('#notification_container').html('<span class="alert">Could not connect to server. Please try again later.</span>'); },
     success     : function(data) {
       if (data.result != "success") {
-        $form.hide();
         var message = data.msg.substring(4);
         $('#notification_container').html('<span class="alert">'+message+'</span>');
       }
-
       else {
+        $form.hide();
         var message = data.msg;
         $('#notification_container').html('<span class="success">'+message+'</span>');
       }
