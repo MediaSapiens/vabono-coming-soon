@@ -129,6 +129,7 @@ dialog {
   display: block;
   text-transform: uppercase;
   font-weight: normal;
+  margin: 0 0 40px;
 }
 
 .cup-link {
@@ -143,12 +144,41 @@ dialog {
   color: #fff;
 }
 
+#mc-form {
 
+}
 
+#mc-form:after {
+  content: '';
+  display:table;
+  clear: both;
+}
 
+#mc-form  input[type=email] {
+  display: inline-block;
+  vertical-align: top;
+  width: 250px;
+  height: 30px;
+  border: 1px solid #333;
+  color: #333;
+  background: #fff;
+  margin: 0 5px 0 0;
+  padding: 0 7px;
+  font-size: 18px;
+  line-height: 30px;
+}
 
-
-
-
+#mc-form  button[type=submit] {
+  display: inline-block;
+  vertical-align: top;
+  height: 32px;
+  padding: 0 7px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 32px;
+  background: #9859b6;
+  color: #fff;
+  border: 1px solid #9859b6;
+}
 
 

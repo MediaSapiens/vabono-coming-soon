@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.ajaxchimp.js"></script>
 </head>
 <body>
   <img src="images/page-img.jpg" alt="" class="page-img">
@@ -11,8 +13,17 @@
     <div class="cup-logo-block">
     	<a href="./" class="cup-logo">Vabono</a>
     	<strong class="cup-slogan">Coming soon</strong>
+      <form id="mc-form">
+        <input type="hidden" name="id" value="us8-4a0ffba39364cdca1d3d20e52-e7d2df0227">
+        <input id="mc-email" type="email" name="EMAIL" placeholder="E-mail">
+        <button type="submit">Newsletter anmelden</button>
+      </form>
     </div>
     <span class="cup-link"><a href="imprint.html">Impressum</a></span>
   </div>
+  $('#mc-form').ajaxChimp({
+      url: 'https://vabono.us8.list-manage.com/tweet-subscribe',
+      lang: ‘de’
+  });
 </body>
 </html>
