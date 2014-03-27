@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+/post?u=<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -13,18 +13,64 @@
     <div class="cup-logo-block">
     	<a href="./" class="cup-logo">Vabono</a>
     	<strong class="cup-slogan">Coming soon</strong>
-      <form id="mc-form">
-        <input type="hidden" name="id" value="us8-4a0ffba39364cdca1d3d20e52-e7d2df0227">
-        <input id="mc-email" type="email" name="EMAIL" placeholder="E-mail">
-        <button type="submit">Newsletter anmelden</button>
+      <form id="mc-form" method="post" action="http://vabono.us8.list-manage2.com/subscribe/post">
+        <input type="hidden" name="u" value="4a0ffba39364cdca1d3d20e52">
+        <input type="hidden" name="id" value="e7d2df0227">
+        <input id="mc-email" type="email" ame="MERGE0" id="MERGE0" placeholder="E-Mail" autocapitalize="off" autocorrect="off">
+        <button type="submit">Newsletter subscribe</button>
       </form>
     </div>
     <span class="cup-link"><a href="imprint.html">Impressum</a></span>
   </div>
-  $('#mc-form').ajaxChimp({
-      url: 'https://vabono.us8.list-manage.com/tweet-subscribe',
-      lang: ‘de’,
-      callback: Danke schön!
+<script type="text/javascript">
+
+$(function () {
+  var $form = $('#mc-form');
+ 
+  $('#mc-form').on('submit', function(event) {
+    if(event) event.preventDefault();
+    register($form);
   });
+});
+function register($form) {
+  $.ajax({
+    type: $form.attr('method'),
+    url: $form.attr('action'),
+    data: $form.serialize(),
+    cache       : false,
+    dataType    : 'json',
+    contentType: "application/json; charset=utf-8",
+    error       : function(err) { $('#notification_container').html('<span class="alert">Could not connect to server. Please try again later.</span>'); },
+    success     : function(data) {
+      
+      if (data.result != "success") {
+        var message = data.msg.substring(4);
+        $('#notification_container').html('<span class="alert">'+message+'</span>');
+      } 
+ 
+      else {
+        var message = data.msg;
+        $('#notification_container').html('<span class="success">'+message+'</span>');
+      }
+    }
+  });
+}
+
+
+/*
+function callbackFunction (resp) {
+    if (resp.result === 'success') {
+      alert(1);
+        return 'Thank you!';
+    }
+}
+
+$('#mc-form').ajaxChimp({
+    url: 'https://vabono.us8.list-manage.com/subscribe/post?u=4a0ffba39364cdca1d3d20e52-e7d2df0227&id=e7d2df0227',
+    callback: callbackFunction
+});
+
+*/
+</script>   
 </body>
 </html>
