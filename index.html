@@ -5,7 +5,6 @@
 	<title>Vabono - Comming soon</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-  <script type="text/javascript" src="js/jquery.ajaxchimp.js"></script>
 </head>
 <body>
   <img src="images/page-img.jpg" alt="" class="page-img">
@@ -43,10 +42,7 @@ function register($form) {
     dataType    : 'json',
     contentType: "application/json; charset=utf-8",
     error       : function(err) { $('#notification_container').html('<span class="alert">Could not connect to server. Please try again later.</span>'); },
-    success     : function(data) {
-      
-      console.log('echo test');
-      console.log(data.result);      
+    success     : function(data) { 
       if (data.result != "success") {
         var message = data.msg.substring(4);
         $('#notification_container').html('<span class="alert">'+message+'</span>');
@@ -59,22 +55,6 @@ function register($form) {
     }
   });
 }
-
-
-/*
-function callbackFunction (resp) {
-    if (resp.result === 'success') {
-      alert(1);
-        return 'Thank you!';
-    }
-}
-
-$('#mc-form').ajaxChimp({
-    url: 'https://vabono.us8.list-manage.com/subscribe/post?u=4a0ffba39364cdca1d3d20e52-e7d2df0227&id=e7d2df0227',
-    callback: callbackFunction
-});
-
-*/
 </script>   
 </body>
 </html>
