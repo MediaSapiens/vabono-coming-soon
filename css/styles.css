@@ -171,24 +171,25 @@ dialog {
 #mc-form  button[type=submit] {
   display: inline-block;
   vertical-align: top;
-  height: 32px;
+  height: 30px;
   padding: 0 7px;
   margin: 0;
   font-size: 16px;
-  line-height: 32px;
+  line-height: 30px;
   background: #9859b6;
   color: #fff;
   border: 1px solid #9859b6;
 }
 
-.notification_container .success {
+#notification_container span{
   display: block;
   padding: 10px 0 0;
+}
+
+#notification_container .success {
   color: #75b660;
 }
 
-.notification_container .alert {
-  display: block;
-  padding: 10px 0 0;
+#notification_container .alert {
   color: #d22828;
 }

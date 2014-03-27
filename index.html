@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Vabono - Comming soon</title>
+	<title>Vabono - Coming soon</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 </head>
@@ -30,7 +30,7 @@
 
 $(function () {
   var $form = $('#mc-form');
- 
+
   $('#mc-form').on('click', function(event) {
     if(event) event.preventDefault();
     register($form);
@@ -45,13 +45,13 @@ function register($form) {
     dataType    : 'json',
     contentType: "application/json; charset=utf-8",
     error       : function(err) { $('#notification_container').html('<span class="alert">Could not connect to server. Please try again later.</span>'); },
-    success     : function(data) { 
+    success     : function(data) {
       if (data.result != "success") {
         //$form.hide();
         var message = data.msg.substring(4);
         $('#notification_container').html('<span class="alert">'+message+'</span>');
-      } 
- 
+      }
+
       else {
         var message = data.msg;
         $('#notification_container').html('<span class="success">'+message+'</span>');
@@ -59,6 +59,6 @@ function register($form) {
     }
   });
 }
-</script>   
+</script>
 </body>
 </html>
