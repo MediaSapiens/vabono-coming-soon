@@ -181,4 +181,14 @@ dialog {
   border: 1px solid #9859b6;
 }
 
+.notification_container .success {
+  display: block;
+  padding: 10px 0 0;
+  color: #75b660;
+}
 
+.notification_container .alert {
+  display: block;
+  padding: 10px 0 0;
+  color: #d22828;
+}
