@@ -20,6 +20,7 @@
         <!-- autocapitalize="off" autocorrect="off" -->
         <button type="submit">Newsletter subscribe</button>
       </form>
+      <div id="notification_container"></div>
     </div>
     <span class="cup-link"><a href="imprint.html">Impressum</a></span>
   </div>
@@ -44,6 +45,8 @@ function register($form) {
     error       : function(err) { $('#notification_container').html('<span class="alert">Could not connect to server. Please try again later.</span>'); },
     success     : function(data) {
       
+      console.log('echo test');
+      console.log(data.result);      
       if (data.result != "success") {
         var message = data.msg.substring(4);
         $('#notification_container').html('<span class="alert">'+message+'</span>');
