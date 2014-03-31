@@ -102,8 +102,8 @@ dialog {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	margin: 0 0 0 -380px;
-	width: 760px;
+	margin: 0 0 0 -251px;
+	width: 502px;
 	height: 100%;
 }
 
@@ -145,7 +145,7 @@ dialog {
 }
 
 #mc-form {
-
+  position: relative;
 }
 
 #mc-form:after {
@@ -154,42 +154,98 @@ dialog {
   clear: both;
 }
 
-#mc-form  input[type=email] {
-  display: inline-block;
-  vertical-align: top;
-  width: 250px;
-  height: 30px;
-  border: 1px solid #333;
-  color: #333;
-  background: #fff;
-  margin: 0 5px 0 0;
-  padding: 0 7px;
-  font-size: 18px;
-  line-height: 30px;
+#mc-email::-webkit-input-placeholder { color:#eee; }
+#mc-email:-moz-placeholder { color:#eee; }
+#mc-email:-ms-placeholder { color:#eee; }
+#mc-email::-ms-input-placeholder { color:#eee; }
+#mc-email:-ms-input-placeholder  { color:#eee; }
+
+#mc-form input[type=email] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  -moz-box-shadow: inset 0 1px 1px #aaa;
+  -webkit-box-shadow: inset 0 1px 1px #aaa;
+  box-shadow: inset 0 1px 1px #aaa;
+
+  display: block;
+  width: 100%;
+  height: 52px;
+  border: 1px solid;
+  border-color: #fff;
+  border-color:rgba(255, 255, 255, 0.3);
+  color: #fff;
+  background-color: #aaa;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin: 0;
+  padding: 0 140px 0 20px;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
 }
 
-#mc-form  button[type=submit] {
-  display: inline-block;
-  vertical-align: top;
-  height: 30px;
+#mc-form input[type=email]:active,
+#mc-form input[type=email]:focus,
+#mc-form input[type=email]:hover {
+  -moz-box-shadow: inset 0 1px 1px #888;
+  -webkit-box-shadow: inset 0 1px 1px #888;
+  box-shadow: inset 0 1px 1px #888;
+
+  border-color:rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#mc-form:hover input[type=email] {
+  -moz-box-shadow: inset 0 1px 1px #888;
+  -webkit-box-shadow: inset 0 1px 1px #888;
+  box-shadow: inset 0 1px 1px #888;
+
+  border-color:rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#mc-form button[type=submit] {
+  -moz-box-shadow: 0 1px 1px #aaa;
+  -webkit-box-shadow: 0 1px 1px #aaa;
+  box-shadow: 0 1px 1px #aaa;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  background: url('../images/bg-btn.png') repeat-x;
+  position: absolute;
+  top:8px;
+  right:8px;
+  width: 120;
+  height: 36px;
   padding: 0 7px;
   margin: 0;
-  font-size: 16px;
-  line-height: 30px;
-  background: #9859b6;
-  color: #fff;
-  border: 1px solid #9859b6;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 36px;
+  border: 1px solid;
+  border-color: #aaa;
+  border-color:rgba(255, 255, 255, 0.6);
+  text-shadow: 0 1px 1px #ccc;
+  color: #aaa;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+#mc-form button[type=submit]:hover {
+  background-position: 0 -36px;
 }
 
 #notification_container span{
   display: block;
   padding: 10px 0 0;
+  color: #9859b6;
+  font-size: 16px;
 }
 
-#notification_container .success {
-  color: #75b660;
-}
-
-#notification_container .alert {
-  color: #d22828;
-}
